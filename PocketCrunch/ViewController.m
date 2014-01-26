@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "CrunchBaseClient.h"
 
 @interface ViewController ()
 
@@ -18,12 +19,29 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+	[self testNetworking];
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)testNetworking
+{
+	CrunchBaseClient *client = [CrunchBaseClient client];
+	[client infoFor:@"twitter"
+			 ofType:kCompany
+	   withResponse:^(NSDictionary *result, NSError *error) {
+		   
+	   }];
+	
+	[client searchWithQuery:@"Zynga"
+			   withResponse:^(NSDictionary *result, NSError *error) {
+				   
+			   }];
+	
 }
 
 @end
