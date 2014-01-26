@@ -7,7 +7,6 @@
 //
 
 #import "CrunchBaseClient.h"
-#import "CrunchBaseResponseSerializer.h"
 #import <AFNetworking/AFNetworking.h>
 
 #define BASE_URL @"http://api.crunchbase.com"
