@@ -127,6 +127,7 @@
 		FA2A641618944ED600011699 /* PocketCrunch */ = {
 			isa = PBXGroup;
 			children = (
+				FA86E45A18A0283800AB252D /* Model */,
 				FA2A644518946F9700011699 /* Crunchbase */,
 				FA2A641F18944ED600011699 /* AppDelegate.h */,
 				FA2A642018944ED600011699 /* AppDelegate.m */,
@@ -179,6 +180,13 @@
 				FA8A03DA1895DEB400344A6B /* CrunchEntity.m */,
 			);
 			name = Crunchbase;
+			sourceTree = "<group>";
+		};
+		FA86E45A18A0283800AB252D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
