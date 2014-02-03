@@ -9,8 +9,8 @@
 #import "ViewController.h"
 #import "CrunchBaseClient.h"
 
-@interface ViewController ()
-
+@interface ViewController () <UITableViewDataSource, UITableViewDelegate>
+@property (nonatomic, weak) IBOutlet UITableView *searchResultsTable;
 @end
 
 @implementation ViewController
@@ -43,5 +43,21 @@
 			   }];
 	
 }
+
+#pragma mark - UITableViewDataSource methods
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+{
+	return 1;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+	return 0;
+}
+
+
+
+#pragma mark - UITableViewDelegate methods
 
 @end

@@ -7,16 +7,9 @@
 //
 
 #import "AFHTTPSessionManager.h"
+#import "CrunchEntity.h"
 
 typedef void(^CrunchBaseResponse)(NSDictionary *result, NSError *error);
-
-typedef enum {
-	kCompany,
-	kPerson,
-	kFinancialOrganization,
-	kProduct,
-	kServiceProvider
-} EntityType;
 
 @interface CrunchBaseClient : AFHTTPSessionManager
 

@@ -12,8 +12,8 @@
 #define BASE_URL @"http://api.crunchbase.com"
 #define VERSION_URL @"/v/1"
 /****
- Yes, the API_KEY intentionally left here. No point of obscuring it since
- the crunchbase API doesn't support HTTPS and it can be sniffed out
+ Yes, the API_KEY is intentionally left here. No point of obscuring it
+ sine the crunchbase API doesn't support HTTPS and it can be sniffed out
  easily
  ****/
 #define API_KEY @"28daj5hwhvpf9b2w3jsd4stw"
@@ -78,7 +78,6 @@
 	}
 	
 	url = [url stringByAppendingPathComponent:[NSString stringWithFormat:@"%@.js", name]];
-	NSLog(@"URL = %@", url);
 	[self GET:url
    parameters:@{@"api_key": self.apiKey}
 	  success:^(NSURLSessionDataTask *task, id responseObject) {
@@ -94,11 +93,17 @@
 {
 	NSString *url = VERSION_URL;
 	url = [url stringByAppendingPathComponent:@"search.js"];
-	NSLog(@"URL = %@", url);
 	[self GET:url
    parameters:@{@"api_key": self.apiKey, @"query": query}
 	  success:^(NSURLSessionDataTask *task, id responseObject) {
-		  response(responseObject, nil);
+		  NSArray *results = [responseObject objectForKey:@"results"];
+		  NSMutableArray *entities = [[NSMutableArray alloc] initWithCapacity:[results count]];
+		  for (NSDictionary *result in results) {
+			  CrunchEntity *entity = [[CrunchEntity alloc] initWithDictionary:result];
+			  [entities addObject:entity];
+		  }
+		  NSDictionary *resultDict = @{@"results": entities};
+		  response(resultDict, nil);
 	  } failure:^(NSURLSessionDataTask *task, NSError *error) {
 		  response(nil, error);
 	  }];

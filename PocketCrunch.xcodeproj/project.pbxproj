@@ -23,6 +23,8 @@
 		FA2A643A18944ED700011699 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = FA2A643818944ED700011699 /* InfoPlist.strings */; };
 		FA2A643C18944ED700011699 /* PocketCrunchTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FA2A643B18944ED700011699 /* PocketCrunchTests.m */; };
 		FA2A644818946FFC00011699 /* CrunchBaseClient.m in Sources */ = {isa = PBXBuildFile; fileRef = FA2A644718946FFC00011699 /* CrunchBaseClient.m */; };
+		FA2A644E18958D5300011699 /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA2A644D18958D5300011699 /* SearchViewController.m */; };
+		FA8A03DB1895DEB400344A6B /* CrunchEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = FA8A03DA1895DEB400344A6B /* CrunchEntity.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +61,10 @@
 		FA2A643B18944ED700011699 /* PocketCrunchTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PocketCrunchTests.m; sourceTree = "<group>"; };
 		FA2A644618946FFC00011699 /* CrunchBaseClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CrunchBaseClient.h; sourceTree = "<group>"; };
 		FA2A644718946FFC00011699 /* CrunchBaseClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CrunchBaseClient.m; sourceTree = "<group>"; };
+		FA2A644C18958D5300011699 /* SearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchViewController.h; sourceTree = "<group>"; };
+		FA2A644D18958D5300011699 /* SearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchViewController.m; sourceTree = "<group>"; };
+		FA8A03D91895DEB400344A6B /* CrunchEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CrunchEntity.h; sourceTree = "<group>"; };
+		FA8A03DA1895DEB400344A6B /* CrunchEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CrunchEntity.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,6 +133,8 @@
 				FA2A642218944ED600011699 /* Main.storyboard */,
 				FA2A642518944ED600011699 /* ViewController.h */,
 				FA2A642618944ED600011699 /* ViewController.m */,
+				FA2A644C18958D5300011699 /* SearchViewController.h */,
+				FA2A644D18958D5300011699 /* SearchViewController.m */,
 				FA2A642818944ED600011699 /* Images.xcassets */,
 				FA2A641718944ED600011699 /* Supporting Files */,
 			);
@@ -167,6 +175,8 @@
 			children = (
 				FA2A644618946FFC00011699 /* CrunchBaseClient.h */,
 				FA2A644718946FFC00011699 /* CrunchBaseClient.m */,
+				FA8A03D91895DEB400344A6B /* CrunchEntity.h */,
+				FA8A03DA1895DEB400344A6B /* CrunchEntity.m */,
 			);
 			name = Crunchbase;
 			sourceTree = "<group>";
@@ -304,7 +314,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				FA2A642718944ED600011699 /* ViewController.m in Sources */,
+				FA8A03DB1895DEB400344A6B /* CrunchEntity.m in Sources */,
 				FA2A642118944ED600011699 /* AppDelegate.m in Sources */,
+				FA2A644E18958D5300011699 /* SearchViewController.m in Sources */,
 				FA2A644818946FFC00011699 /* CrunchBaseClient.m in Sources */,
 				FA2A641D18944ED600011699 /* main.m in Sources */,
 			);
